@@ -6,3 +6,19 @@
 //Создаем 2 массива. 
 string[] array1 = new string[5] {"Bob", "Rob12", "hello", "Buddy", "Yo"};
 string[] array2 = new string[array1.Length];
+
+//Метод void, в котором цикле for проверка условия (длина строки <= 3). 
+//Если да, то элемент первого массива заносится в count элемент второго массива. 
+//Переменная count чтобы поочередно закидывать из первого массива во второй.
+void SecondArrayWithIF(string[] array1, string[] array2)
+{
+    int count = 0;
+    for (int i = 0; i < array1.Length; i++)
+    {
+    if(array1[i].Length <= 3)
+        {
+        array2[count] = array1[i];
+        count++;
+        }
+    }
+}
